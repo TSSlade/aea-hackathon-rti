@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}, "axis": {"labelFontSize": 10, "titleFontSize": 12}, "title": {"anchor": "start", "fontSize": 16}}, "data": {"name": "data-12ac1e82918a7560c764c91d22cea05e"}, "mark": {"type": "rect"}, "encoding": {"color": {"field": "count", "scale": {"scheme": "blues"}, "title": "Call Count", "type": "quantitative"}, "tooltip": [{"field": "source_idx", "title": "Source Index", "type": "ordinal"}, {"field": "source", "title": "Source Phone", "type": "nominal"}, {"field": "target_idx", "title": "Target Index", "type": "ordinal"}, {"field": "target", "title": "Target Phone", "type": "nominal"}, {"field": "count", "title": "Calls", "type": "quantitative"}], "x": {"axis": {"labelAngle": 0}, "field": "target_idx", "title": "Target Phone Index", "type": "ordinal"}, "y": {"axis": {"labelAngle": 0}, "field": "source_idx", "title": "Source Phone Index", "type": "ordinal"}}, "height": 800, "title": "Phone Number Interaction Heatmap (Non-Zero Interactions Only)", "width": 800, "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json", "datasets": {"data-12ac1e82918a7560c764c91d22cea05e": [{"source": "<callers-number>", "target": "0123456789", "count": 1, "source_idx": 40, "target_idx": 0}, {"source": "<callers-number>", "target": "1012345678", "count": 1, "source_idx": 40, "target_idx": 1}, {"source": "<callers-number>", "target": "1112345678", "count": 1, "source_idx": 40, "target_idx": 2}, {"source": "<callers-number>", "target": "1123456789", "count": 2, "source_idx": 40, "target_idx": 3}, {"source": "<callers-number>", "target": "1212345678", "count": 2, "source_idx": 40, "target_idx": 4}, {"source": "<callers-number>", "target": "1312345678", "count": 1, "source_idx": 40, "target_idx": 5}, {"source": "<callers-number>", "target": "1412345678", "count": 1, "source_idx": 40, "target_idx": 6}, {"source": "<callers-number>", "target": "1512345678", "count": 1, "source_idx": 40, "target_idx": 7}, {"source": "<callers-number>", "target": "1612345678", "count": 2, "source_idx": 40, "target_idx": 8}, {"source": "<callers-number>", "target": "1712345678", "count": 1, "source_idx": 40, "target_idx": 9}, {"source": "<callers-number>", "target": "1812345678", "count": 2, "source_idx": 40, "target_idx": 10}, {"source": "<callers-number>", "target": "1912345678", "count": 2, "source_idx": 40, "target_idx": 11}, {"source": "<callers-number>", "target": "2012345678", "count": 3, "source_idx": 40, "target_idx": 12}, {"source": "<callers-number>", "target": "2112345678", "count": 10, "source_idx": 40, "target_idx": 13}, {"source": "<callers-number>", "target": "2123456789", "count": 4, "source_idx": 40, "target_idx": 14}, {"source": "<callers-number>", "target": "2212345678", "count": 1, "source_idx": 40, "target_idx": 15}, {"source": "<callers-number>", "target": "2312345678", "count": 2, "source_idx": 40, "target_idx": 16}, {"source": "<callers-number>", "target": "2412345678", "count": 3, "source_idx": 40, "target_idx": 17}, {"source": "<callers-number>", "target": "2512345678", "count": 1, "source_idx": 40, "target_idx": 18}, {"source": "<callers-number>", "target": "262345678", "count": 3, "source_idx": 40, "target_idx": 19}, {"source": "<callers-number>", "target": "272345678", "count": 2, "source_idx": 40, "target_idx": 20}, {"source": "<callers-number>", "target": "2812345678", "count": 1, "source_idx": 40, "target_idx": 21}, {"source": "<callers-number>", "target": "2912345678", "count": 4, "source_idx": 40, "target_idx": 22}, {"source": "<callers-number>", "target": "3012345678", "count": 2, "source_idx": 40, "target_idx": 23}, {"source": "<callers-number>", "target": "3112345678", "count": 1, "source_idx": 40, "target_idx": 24}, {"source": "<callers-number>", "target": "3123456789", "count": 2, "source_idx": 40, "target_idx": 25}, {"source": "<callers-number>", "target": "3212345678", "count": 2, "source_idx": 40, "target_idx": 26}, {"source": "<callers-number>", "target": "3312345678", "count": 1, "source_idx": 40, "target_idx": 27}, {"source": "<callers-number>", "target": "342345678", "count": 2, "source_idx": 40, "target_idx": 28}, {"source": "<callers-number>", "target": "3512345678", "count": 1, "source_idx": 40, "target_idx": 29}, {"source": "<callers-number>", "target": "362345678", "count": 2, "source_idx": 40, "target_idx": 30}, {"source": "<callers-number>", "target": "3712345678", "count": 1, "source_idx": 40, "target_idx": 31}, {"source": "<callers-number>", "target": "3812345678", "count": 1, "source_idx": 40, "target_idx": 32}, {"source": "<callers-number>", "target": "392345678", "count": 1, "source_idx": 40, "target_idx": 33}, {"source": "<callers-number>", "target": "4123456789", "count": 1, "source_idx": 40, "target_idx": 34}, {"source": "<callers-number>", "target": "5123456789", "count": 2, "source_idx": 40, "target_idx": 35}, {"source": "<callers-number>", "target": "623456789", "count": 1, "source_idx": 40, "target_idx": 36}, {"source": "<callers-number>", "target": "7123456789", "count": 14, "source_idx": 40, "target_idx": 37}, {"source": "<callers-number>", "target": "8123456789", "count": 33, "source_idx": 40, "target_idx": 38}, {"source": "<callers-number>", "target": "9123456789", "count": 1, "source_idx": 40, "target_idx": 39}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

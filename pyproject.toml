@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling>=1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "aea-hackathon"
+version = "0.1.0"
+description = "Utilities for anonymizing bill PDFs and analyzing extracted phone interactions."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "altair>=5.5.0",
+    "pandas>=2.2.3",
+    "pdfplumber>=0.11.7",
+    "pypdf>=6.1.1",
+]
+
+[project.scripts]
+anonymize-bill-pdf = "aea_hackathon.anonymize_bill_pdf:main"
+extract-bill-data = "aea_hackathon.extract_pdf_data:main"
+build-call-graph = "aea_hackathon.build_graph:main"
+visualize-heatmap = "aea_hackathon.visualize_heatmap:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/aea_hackathon"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

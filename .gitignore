@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+data/outputs/*
+!data/outputs/sample-bill-mock-nums-anonymized.pdf
+!data/outputs/sample-bill.tsv
+!data/outputs/adjacency_matrix.csv
+!data/outputs/adjacency_matrix.txt
+!data/outputs/heatmap.html
+data/mapping.csv
+data/outputs/mapping-file.csv
+mapping-file.csv
+
+*.py[cod]
