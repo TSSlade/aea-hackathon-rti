@@ -2,6 +2,18 @@
 
 Utilities for anonymizing sample billing PDFs, extracting call records, and building simple network-analysis outputs from the extracted interactions.
 
+## Context
+
+This repository was produced in response to the [AEA MERLTech Hackathon event](https://www.eval.org/Education-Programs/AEA-MERLTech-Hackathon). Our submission via the event page has more detail about the back-and-forth with the GenAI agent by way of which we developed this repository.
+
+To start off the exercise, we executed the following prompt in OpenCode 1.3.10 running in Ubuntu 24.04.4 LTS on WSL2, using Claude Sonnet 4.5 through a GitHub Copilot Pro subscription:
+
+```md
+I have a PDF file at `data/inputs/<filename>.pdf`. I want to extract the contents of the columns whose headers are "Dialled Number" and `Duration {HH:MM:SS} / Volume in Kb`. The desired output is a 3-column TSV where the first column is `source` (with a constant of `<caller-number>`) and the second columns are pulled from the PDF. Create a plan to do this as simply and reliably as possible.
+```
+
+Subsequent clean-up (outside the scope of what is reported in the submission) was required in order to properly anonymize source files, output data, etc. for sharing.
+
 ## Setup
 
 This is a `uv`-managed Python project.
